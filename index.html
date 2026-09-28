@@ -69,6 +69,7 @@
   .nav-link.active { background: #fff; color: #000; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body class="bg-[#e8dcce] text-[#1a1a1a] font-sans antialiased min-h-screen py-4 md:py-10 px-2 sm:px-4 md:px-8 flex justify-center">
 
@@ -77,7 +78,11 @@
   <!-- ================= HERO ================= -->
   <section id="home" class="relative m-3 md:m-4 rounded-[28px] overflow-hidden bg-[#242c31] text-white">
     <div class="absolute inset-0 z-0">
-      <img alt="Architectural blueprint render of a modern glass villa" class="w-full h-full object-center object-center scale-[1.02] filter brightness-[0.82] contrast-[1.05]" src="desktop.png"/>
+      <picture class="absolute inset-0 z-0 block w-full h-full">
+        <source media="(max-width: 768px)" srcset="MOBILE.jpg"/>
+        <source media="(min-width: 769px)" srcset="desktop.png"/>
+        <img alt="Architectural blueprint render of a modern glass villa" class="w-full h-full object-cover scale-[1.02] filter brightness-[0.82] contrast-[1.05]" src="desktop.png"/>
+      </picture>
       <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60 pointer-events-none"></div>
     </div>
 
@@ -217,7 +222,7 @@
       <!-- Center Image -->
       <div class="lg:col-span-4 flex justify-center">
         <div class="relative w-full max-w-[340px] aspect-[4/5] rounded-[28px] overflow-hidden shadow-2xl group">
-          <img alt="Hardik Arora on site at a residential project" class="w-full h-full object-cover object-center roup-hover:scale-105 transition-transform duration-700 ease-out" src="hardik-arora.jpg"/>
+          <img alt="Hardik Arora on site at a residential project" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="hardik-arora.jpg"/>
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
           <div class="absolute bottom-4 left-4 right-4">
             <div class="glass-card-dark rounded-2xl p-3.5">
@@ -534,7 +539,7 @@
       <div class="hidden md:block md:col-span-3 opacity-70 hover:opacity-100 transition-opacity duration-300">
         <div class="rounded-3xl overflow-hidden bg-neutral-50 border border-neutral-200 group">
           <div class="relative aspect-[4/3] overflow-hidden">
-            <img alt="Modern residence under construction with completed design render" class="w-full h-full object-cover object-center :scale-105 transition-transform duration-700" src="work-in-progress.jpg"/>
+            <img alt="Modern residence under construction with completed design render" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="work-in-progress.jpg"/>
           </div>
           <div class="p-3.5 text-xs">
             <p class="font-semibold text-neutral-800">Contemporary Residence</p>
@@ -752,10 +757,10 @@
       </div>
 
       <div id="videoSlider" class="slider-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
-          <div class="snap-start shrink-0 w-[220px] sm:w-[280px]">
+          <div class="snap-start shrink-0 w-[240px] sm:w-[300px]">
             <div class="rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 shadow-md">
-              <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                <video class="gallery-video w-full h-full object-cover" preload="metadata" playsinline controls poster="video1-poster.jpg" src="video%201.mp4"></video>
+              <div class="relative aspect-[9/16] max-h-[72vh] mx-auto overflow-hidden bg-black rounded-2xl w-full">
+                <video class="gallery-video w-full h-full object-contain" preload="metadata" playsinline controls controlsList="nodownload" src="video%201.mp4"></video>
               </div>
               <div class="p-3 text-xs">
                 <p class="font-semibold text-neutral-800">Modern Duplex — Interior Walkthrough</p>
@@ -763,10 +768,10 @@
               </div>
             </div>
           </div>
-          <div class="snap-start shrink-0 w-[220px] sm:w-[280px]">
+          <div class="snap-start shrink-0 w-[240px] sm:w-[300px]">
             <div class="rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 shadow-md">
-              <div class="relative aspect-[9/16] overflow-hidden bg-black">
-                <video class="gallery-video w-full h-full object-cover" preload="metadata" playsinline controls poster="video3-poster.jpg" src="video%203.mp4"></video>
+              <div class="relative aspect-[9/16] max-h-[72vh] mx-auto overflow-hidden bg-black rounded-2xl w-full">
+                <video class="gallery-video w-full h-full object-contain" preload="metadata" playsinline controls controlsList="nodownload" src="video%203.mp4"></video>
               </div>
               <div class="p-3 text-xs">
                 <p class="font-semibold text-neutral-800">Contemporary Residence — Entrance & Foyer</p>
